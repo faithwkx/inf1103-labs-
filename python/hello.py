@@ -6,13 +6,13 @@
 # print("=========================")
 
 # # Activity 2
-# username = "kxii.xinn"
-# bio = "-"
-# followers = 0
+username = "kxii.xinn"
+bio = "-"
+followers = 0
 
-# print("Username:", username)
-# print("Bio:", bio)  
-# print("Followers:", followers)
+print("Username:", username)
+print("Bio:", bio)  
+print("Followers:", followers)
 
 
 # # Activity 3
@@ -40,16 +40,16 @@
 # print("Age:", age)
 # print("Category:", category)
 
-# Activity 5 
-username = input("Enter your username: ")
-age = int(input("Enter your age: "))
-category = input("Enter your category: ")
+# # Activity 5 
+# username = input("Enter your username: ")
+# age = int(input("Enter your age: "))
+# category = input("Enter your category: ")
 
-print("\nInstagram Profile")
-print("=========================")
-print("Username:", username)
-print("Age:", age)
-print("Category:", category)
+# print("\nInstagram Profile")
+# print("=========================")
+# print("Username:", username)
+# print("Age:", age)
+# print("Category:", category)
 
-if age>40 and category == "fun":
-    print("You are too old what is fun for you??")
+# if age>40 and category == "fun":
+#     print("You are too old what is fun for you??")
