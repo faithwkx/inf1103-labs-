@@ -17,28 +17,28 @@
 
 # # Activity 3
 
-followers = 100
+# followers = 100
 
-followers += 50
-print("Day 1:", followers)
+# followers += 50
+# print("Day 1:", followers)
 
-followers += 20
-print("Day 2:", followers)
+# followers += 20
+# print("Day 2:", followers)
 
-followers -= 10
-print("Day 3:", followers)
+# followers -= 10
+# print("Day 3:", followers)
 
 # # Activity 4
 
-# username = input("Enter your username: ")
-# age = int(input("Enter your age: "))
-# category = input("Enter your category: ")
+username = input("Enter your username: ")
+age = int(input("Enter your age: "))
+category = input("Enter your category: ")
 
-# print("\nInstagram Profile")
-# print("=========================")
-# print("Username:", username)
-# print("Age:", age)
-# print("Category:", category)
+print("\nInstagram Profile")
+print("=========================")
+print("Username:", username)
+print("Age:", age)
+print("Category:", category)
 
 # # Activity 5 
 # username = input("Enter your username: ")
