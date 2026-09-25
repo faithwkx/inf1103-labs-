@@ -37,6 +37,7 @@ def load_inventory():
         file = open(file_path, "r")
 
         inventory_line = file.readline().strip()
+        history_line = file.readline().strip()
 
         file.close()
 
@@ -45,15 +46,37 @@ def load_inventory():
         else:
             inventory = int(inventory_line)
 
-        return inventory
+        if history_line == "":
+            history = []
+        else:
+            history = history_line.split(",")
+
+            for i in range(len(history)):
+                history[i] = int(history[i])
+
+        return inventory, history
 
     except FileNotFoundError:
-        return 0
+        return 0, []
 
 
-inventory = load_inventory()
+def save_inventory(inventory, history):
+    file_path = os.path.join(os.path.dirname(__file__), "inventory.txt")
 
-transaction_history = []
+    file = open(file_path, "w")
+
+    file.write(str(inventory) + "\n")
+
+    for i in range(len(history)):
+        file.write(str(history[i]))
+
+        if i < len(history) - 1:
+            file.write(",")
+
+    file.close()
+
+
+inventory, transaction_history = load_inventory()
 
 deliveries = 0
 failed = 0
@@ -65,6 +88,10 @@ while True:
     stock = get_valid_input()
 
     if stock == "quit":
+        save_inventory(inventory, transaction_history)
+
+        print("Inventory successfully saved to inventory.txt")
+
         break
 
     if stock is None:
