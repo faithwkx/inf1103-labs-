@@ -53,10 +53,13 @@ def load_inventory():
 
 inventory = load_inventory()
 
+transaction_history = []
+
 deliveries = 0
 failed = 0
 
 print("Current inventory:", inventory)
+print("Transaction history:", transaction_history)
 
 while True:
     stock = get_valid_input()
@@ -70,11 +73,14 @@ while True:
 
     inventory = process_delivery(inventory, stock)
 
+    transaction_history.append(stock)
+
     tax = calculate_tax(stock)
 
     deliveries = deliveries + 1
 
     print("Delivery tax:", tax)
     print("Current inventory:", inventory)
+    print("Transaction history:", transaction_history)
 
 generate_report(deliveries, failed)
